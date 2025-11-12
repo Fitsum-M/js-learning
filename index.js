@@ -91,35 +91,70 @@
 //     }
 // }
 
-let min=1;
-let max=100;
-let answer=Math.floor(Math.random()*100);
+// let min=1;
+// let max=100;
+// let answer=Math.floor(Math.random()*100);
 
-let attemp=0;
-let guess;
-let running=true;
+// let attemp=0;
+// let guess;
+// let running=true;
 
-while(running){
-    let guess = window.prompt("Enter a number between " + min + " and " + max + ":");
-    guess=Number(guess);
-    if(isNaN(guess)){
-        window.alert("not guess type");
+// while(running){
+//     let guess = window.prompt("Enter a number between " + min + " and " + max + ":");
+//     guess=Number(guess);
+//     if(isNaN(guess)){
+//         window.alert("not guess type");
+//     }
+//     else if(guess<min || max<guess){
+//         window.alert("this is not in range");
+//     }
+//     else{
+//         attemp++;
+//         if(guess<answer){
+//             window.alert("to low");
+//         }
+//         else if(guess>answer){
+//             window.alert("to high");
+//         }
+//         else{
+//             window.alert("correct in",{attemp},"tines")
+//             running =false;
+//         }
+
+//     }
+// }
+// function happybirthday(username,age){
+//     console.log("happy birthday to you"+username);
+//     console.log("happy birthday to you");
+//     console.log("happy birthday to you"+age);
+//     console.log("happy birthday to you");
+// }
+// happybirthday("abiy",59);
+// console.log(happybirthday);
+// function multiple(x,y){
+//     resutl=x*y;
+//     return resutl;
+// }
+// multiple(5,66);
+const mytextbox=document.getElementById("textbox");
+const mycelcius=document.getElementById("mycelcius");
+const myfarinite=document.getElementById("myfaranite");
+const mysubmit=document.getElementById("mysubmit");
+const myresult=document.getElementById("myresult");
+let temp;
+function convert(){
+    if(myfaranite.checked){
+        temp=Number(textbox.value);
+        temp = (temp * 9 / 5) + 32;
+        myresult.textContent=temp;
     }
-    else if(guess<min || max<guess){
-        window.alert("this is not in range");
+    else if(mycelcius.checked){
+        temp=Number(textbox.value);
+        temp = (temp - 32) * 5 / 9;
+        myresult.textContent=temp;
     }
     else{
-        attemp++;
-        if(guess<answer){
-            window.alert("to low");
-        }
-        else if(guess>answer){
-            window.alert("to high");
-        }
-        else{
-            window.alert("correct in",{attemp},"tines")
-            running =false;
-        }
-
+        console.log("you are not in correct path");
     }
 }
+
