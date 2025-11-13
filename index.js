@@ -136,25 +136,29 @@
 //     return resutl;
 // }
 // multiple(5,66);
-const mytextbox=document.getElementById("textbox");
-const mycelcius=document.getElementById("mycelcius");
-const myfarinite=document.getElementById("myfaranite");
-const mysubmit=document.getElementById("mysubmit");
-const myresult=document.getElementById("myresult");
-let temp;
-function convert(){
-    if(myfaranite.checked){
-        temp=Number(textbox.value);
-        temp = (temp * 9 / 5) + 32;
-        myresult.textContent=temp;
-    }
-    else if(mycelcius.checked){
-        temp=Number(textbox.value);
-        temp = (temp - 32) * 5 / 9;
-        myresult.textContent=temp;
-    }
-    else{
-        console.log("you are not in correct path");
-    }
-}
+function genaratepassword(length,includeNumber,includeUppercase,includeLowercase,includeSymbol){
+    const lowercasechar="abcdefghijklmnopqrstuvwxyz";
+    const Uppercasechar="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberchar="0123456789";
+    const Symbolchar="#@$%^!&*()";
 
+    let alowedchar="";
+    let password="";
+    alowedchar +=includeLowercase ? lowercasechar:"";
+    alowedchar +=includeUppercase? Uppercasechar:"";
+    alowedchar +=includeSymbol? Symbolchar:"";
+    alowedchar+=includeNumber?numberchar:"";
+
+    if(length<0){
+        return '(password length must be 1)';
+    }
+    else if (alowedchar.length===0){
+        return '(atleast 1 selected of character)';
+    }
+    for(let i=0;i<length;i++){
+        const randomIndex=Math.floor(Math.random() *alowedchar.length);
+        password += alowedchar[randomIndex];
+    }
+    return password;
+    
+}
