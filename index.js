@@ -1,10 +1,14 @@
-function update(){
-    const now=new Date();
-    const hour = now.getHours().toString().padStart(2, '0');
-    const minute = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-    const timespring = `${hour}:${minute}:${seconds}`;
-    document.getElementById("clock").textContent=timespring;
+const display=document.getElementById("display");
+function appendtodisplay(input){
+    display.value+=input;
 }
-update();
-setInterval(update,1000);
+function cleardisplay(){
+    display.value="";
+}
+function calculate(){
+      try{
+        display.value=eval(display.value);
+      }catch(error){
+        display.value="error";
+      }
+}
