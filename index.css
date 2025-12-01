@@ -1,54 +1,24 @@
 body{
-    margin:0;
-    display: flex;
-    justify-content: center;
+    margin :0;
+    display:flex ;
     align-items: center;
-    height: 100vh;
-    background-color: hsl(0,0%,15%);
+    flex-direction: column;
 }
-#calculator{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: hsl(0, 0%, 15%);
-    border-radius: 15px;
-    max-width: 500px;
-    overflow: hidden;
+#mybutton button{
+    padding: 10px;
+    margin-left:10px ;
+    margin-right:10px ;
+    font-size: 7.5rem;
 }
-#display{
-   width: 100%;
-   padding:20px;
-   font-size: 5rem;
-   text-align: left;
-   border: none;
-   background-color: hsl(0, 0%, 20%); 
-   color: aliceblue;
-}
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap:10px;
-    padding:25px;
+p{
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 15px;
 }
 button{
-    width:100px;
-    height: 80px;
-    border-radius: 50px;
-    background-color: hsl(0,0%,30%);
-    color:white;
-    font-size:3rem;
-    font-weight:bold;
-    cursor:pointer;
-}
-button:hover{
-     background-color: hsl(0,0%,50%);
-}
-button:active{
-     background-color: hsl(0,0%,70%);
-}
-.opretor{
-    background-color: orange;
+    background-color: rgb(87, 87, 214);
 
 }
-.opretor:hover{
-    background-color: rgb(238, 183, 82);
-    color: black;
+button:hover{
+    background-color: blue;
 }

@@ -8,28 +8,19 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-        <div id="calculator">
-            <input id="display" readonly>
-            <div id="keys">
-          <button onclick="appendtodisplay('+')" class="opretor">+</button>
-          <button onclick="appendtodisplay('0')">0</button>
-          <button onclick="appendtodisplay('1')">1</button>
-          <button onclick="appendtodisplay('2')">2</button>
-          <button onclick="appendtodisplay('-')" class="opretor">- </button>
-          <button onclick="appendtodisplay('3')">3</button>
-          <button onclick="appendtodisplay('4')">4</button>
-          <button onclick="appendtodisplay('5')">5</button>
-          <button onclick="appendtodisplay('*')" class="opretor">*</button>
-          <button onclick="appendtodisplay('6')">6</button>
-          <button onclick="appendtodisplay('7')">7</button>
-          <button onclick="appendtodisplay('8')">8</button>
-          <button onclick="appendtodisplay('/')"class="opretor">/</button>
-          <button onclick="appendtodisplay('9')">9</button>
-          <button onclick="appendtodisplay('.')">.</button>
-          <button onclick="calculate()">=</button>
-          <button onclick="cleardisplay()">C</button>
-            </div>
-        </div>
+  
+       <h1 >Rock     Paper     Scissor</h1>
+       <div id="mybutton">
+         <button onclick="playgame('rock')">✊</button>
+          <button onclick="playgame('paper')">✋</button>
+           <button onclick="playgame('scissors')">✌️</button>
+         </div>
+         <p id="playerdisplay">player:</p>
+         <p id="computerdisplay">computer:</p>
+         <p id="resultdisplay">result:</p>
+         <p id="playerscore">player score:</p>
+         <p id="computerscore">computer score:</p>
+       
         <script src="index.js"></script>
 </body>
 </html>
